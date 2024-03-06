@@ -1,0 +1,53 @@
+POST http://localhost:3000/users/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"user3@hotmail.com",
+    "username": "user3",
+    "password": "password"
+}
+
+###rota para registro de usuario
+
+GET http://localhost:3000/users/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+
+DELETE http://localhost:3000/users/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "user3",
+    "password": "password"
+}
+
+###
+
+GET http://localhost:3000/books/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo1LCJlbWFpbCI6InVzZXIzQGhvdG1haWwuY29tIiwidXNlcm5hbWUiOiJ1c2VyMyIsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsInBhc3N3b3JkIjoiJDJiJDEwJGtQTDlxT0xvUnc5eHA1dTR3TkNGUWU3U1M3a3p2eUFCeVBZamdUS1RWSkhuLm1Yc3VrN01XIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0yMlQwMDoyMzoxNi42MjNaIiwidXBkYXRlZEF0IjoiMjAyNC0wMi0yMlQwMDoyMzoxNi42MjNaIn0sImlhdCI6MTcwODYyMjU2NCwiZXhwIjoxNzA4NjI2MTY0fQ.a1uEvZ29jsrHROhbBxaArdzj2m3dXUiYzLYN9Qa-Q5o
+
+
+###
+
+POST http://localhost:3000/books/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo1LCJlbWFpbCI6InVzZXIzQGhvdG1haWwuY29tIiwidXNlcm5hbWUiOiJ1c2VyMyIsInJvb3QiOmZhbHNlLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJwYXNzd29yZCI6IiQyYiQxMCRrUEw5cU9Mb1J3OXhwNXU0d05DRlFlN1NTN2t6dnlBQnlQWWpnVEtUVkpIbi5tWHN1azdNVyIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMjJUMDA6MjM6MTYuNjIzWiIsInVwZGF0ZWRBdCI6IjIwMjQtMDItMjJUMDA6MjM6MTYuNjIzWiJ9LCJpYXQiOjE3MDk3NDc3OTMsImV4cCI6MTcwOTc1MTM5M30.rU7kSieUv9PsbwE1isY0yW-AYNcZmQ_cL2VmE7q-rec
+
+{
+    "title": "Exu não é do diabo"
+}
+
+###
+
+DELETE  http://localhost:3000/books/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6IiQyYiQxMCRrUEw5cU9Mb1J3OXhwNXU0d05DRlFlN1NTN2t6dnlBQnlQWWpnVEtUVkpIbi5tWHN1azdNVyIsImlhdCI6MTcwODU2MzIxOX0.I52RDZ05uN6djO6k2zE_5PdQFE_hLsYPfqviqalzLos
+
+###
