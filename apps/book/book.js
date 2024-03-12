@@ -79,13 +79,6 @@ bookRouter.post("/", authMiddleware ,async (req, res, next) => {
   try {
     const userData = req.user;
 
-    // Validar o payload do token JWT
-    if (!userData) {
-      return res
-        .status(401)
-        .json({ message: "Token de autenticação inválido" });
-    }
-
 
     await bookSchema.validate(req.body, {abortEarly: false})
 
