@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { isAuthenticated } from "../../middleware/has-permissions.js";
 import { PrismaClient } from "@prisma/client";
 import { validateTokenJWT } from "../../auth/hash-utils.js";
 import { bookSchema } from "./book-validator.js";
@@ -80,7 +79,7 @@ bookRouter.post("/", authMiddleware ,async (req, res, next) => {
     const userData = req.user;
 
 
-    await bookSchema.validate(req.body, {abortEarly: false})
+    await bookSchema.validate(req.body, { abortEarly: false })
 
     const { id, createdAt, updatedAt, userId, ...secureData } = req.body;
     // Criar o livro associado ao usuário do token
